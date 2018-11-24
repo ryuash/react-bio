@@ -7,14 +7,15 @@ const {db} = require('./db')
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(express.json())
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({extended: true}));
+
+app.use('/api', require('./api'))
 
 app.get('/',(req,res,next)=>{
     res.sendFile(path.join(__dirname, '..', 'client', 'index.html'))
     // res.send('yo yo yo up in the home');
 })
 
-app.use('/api', require('./api'))
 
 app.use((req, res, next) => {
     if (path.extname(req.path).length > 0) {

@@ -9,6 +9,16 @@
     <title>Just messing around</title>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <!--------->
+        <button>All</button>
+        <button>Latest</button>
+        <form method="GET" action="/api/search">
+            <label for="name"></label>
+            <input type="text" name="name" placeholder="search here">
+            <button type="submit">Search</button>
+        </form>
+        <!------------>
+    </div>
 </body>
 </html>

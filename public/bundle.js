@@ -93,8 +93,9 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("throw new Error(\"Module parse failed: Unexpected token (7:12)\\nYou may need an appropriate loader to handle this file type.\\n|     render(){\\r\\n|         return(\\r\\n>             <div id=\\\"main\\\">\\r\\n|             <button>All</button>\\r\\n|             <button>Latest</button>\\r\");\n\n//# sourceURL=webpack:///./client/main.js?");
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: Multiple configuration files found. Please remove one:\n - package.json#babel\n - .babelrc\nfrom /mnt/c/Users/Wingman/Desktop/forFun\n    at findRelativeConfig (/mnt/c/Users/Wingman/Desktop/forFun/node_modules/@babel/core/lib/config/files/configuration.js:117:17)\n    at buildRootChain (/mnt/c/Users/Wingman/Desktop/forFun/node_modules/@babel/core/lib/config/config-chain.js:113:39)\n    at loadPrivatePartialConfig (/mnt/c/Users/Wingman/Desktop/forFun/node_modules/@babel/core/lib/config/partial.js:85:55)\n    at Object.loadPartialConfig (/mnt/c/Users/Wingman/Desktop/forFun/node_modules/@babel/core/lib/config/partial.js:110:18)\n    at Object.<anonymous> (/mnt/c/Users/Wingman/Desktop/forFun/node_modules/babel-loader/lib/index.js:140:26)\n    at Generator.next (<anonymous>)\n    at asyncGeneratorStep (/mnt/c/Users/Wingman/Desktop/forFun/node_modules/babel-loader/lib/index.js:3:103)\n    at _next (/mnt/c/Users/Wingman/Desktop/forFun/node_modules/babel-loader/lib/index.js:5:194)\n    at /mnt/c/Users/Wingman/Desktop/forFun/node_modules/babel-loader/lib/index.js:5:364\n    at new Promise (<anonymous>)\n    at Object.<anonymous> (/mnt/c/Users/Wingman/Desktop/forFun/node_modules/babel-loader/lib/index.js:5:97)\n    at Object._loader (/mnt/c/Users/Wingman/Desktop/forFun/node_modules/babel-loader/lib/index.js:220:18)\n    at Object.loader (/mnt/c/Users/Wingman/Desktop/forFun/node_modules/babel-loader/lib/index.js:56:18)\n    at Object.<anonymous> (/mnt/c/Users/Wingman/Desktop/forFun/node_modules/babel-loader/lib/index.js:51:12)");
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=bundle.js.map

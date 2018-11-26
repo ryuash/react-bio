@@ -28,6 +28,7 @@ router.get('/latest',async(req,res,next)=>{
 router.get('/search?', async(req,res,next)=>{
     try{
        let query = req.query.name;
+       console.log(query);
        const find = await Table.findOne({where:{name:query}});
         res.json(find);
     }

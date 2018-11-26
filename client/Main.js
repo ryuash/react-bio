@@ -47,14 +47,16 @@ export default class Main extends React.Component{
         this.setState({value:event.target.value})
     }
 
+
     async submitSearch(event){
+        event.preventDefault();
         try{
-            // event.preventDefault();
-            // const findName = await axios.get(`/search?name={this.state.value}`);
-            // const final = findName.data;
-            // this.setState({
-            //     current:final
-            // })
+            const findName = await axios.get('/api/search',{params:{name:this.state.value}});
+            const final = findName.data;
+            console.log(final);
+            this.setState({
+                current:[final]
+            })
         }
         catch(error){
             console.error(error);

@@ -353,27 +353,39 @@ var Main = function (_React$Component) {
         key: 'submitSearch',
         value: function () {
             var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(event) {
+                var findName, final;
                 return regeneratorRuntime.wrap(function _callee4$(_context4) {
                     while (1) {
                         switch (_context4.prev = _context4.next) {
                             case 0:
-                                try {
-                                    // event.preventDefault();
-                                    // const findName = await axios.get(`/search?name={this.state.value}`);
-                                    // const final = findName.data;
-                                    // this.setState({
-                                    //     current:final
-                                    // })
-                                } catch (error) {
-                                    console.error(error);
-                                }
+                                event.preventDefault();
+                                _context4.prev = 1;
+                                _context4.next = 4;
+                                return _axios2.default.get('/api/search', { params: { name: this.state.value } });
 
-                            case 1:
+                            case 4:
+                                findName = _context4.sent;
+                                final = findName.data;
+
+                                console.log(final);
+                                this.setState({
+                                    current: [final]
+                                });
+                                _context4.next = 13;
+                                break;
+
+                            case 10:
+                                _context4.prev = 10;
+                                _context4.t0 = _context4['catch'](1);
+
+                                console.error(_context4.t0);
+
+                            case 13:
                             case 'end':
                                 return _context4.stop();
                         }
                     }
-                }, _callee4, this);
+                }, _callee4, this, [[1, 10]]);
             }));
 
             function submitSearch(_x) {

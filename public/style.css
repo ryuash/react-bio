@@ -1,3 +1,48 @@
 /* *{
     background-color:blue;
 } */
+*{
+    margin:0 auto;
+    box-sizing:border-box;
+}
+
+#app{
+    max-width:40%;
+}
+
+img{
+    max-width:40%;
+    height:auto;
+    float:left;
+    margin:.6em;
+}
+
+h3{
+    text-align:center;
+}
+
+p{
+    margin:.5em 0;
+}
+
+.currentContainer{
+    margin:1em 0;
+}
+
+.currentContainer:last-child{
+    margin-bottom:2.6em;
+}
+
+form{
+    display:inline-block;
+}
+
+button{
+    min-width:67px;
+    padding:.4em 0;
+    margin:1em .3em;
+}
+
+input{
+    padding:.4em .2em;
+}

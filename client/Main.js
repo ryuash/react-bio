@@ -53,9 +53,9 @@ export default class Main extends React.Component{
         try{
             const findName = await axios.get('/api/search',{params:{name:this.state.value}});
             const final = findName.data;
-            console.log(final);
             this.setState({
-                current:[final]
+                current:[final],
+                value:''
             })
         }
         catch(error){

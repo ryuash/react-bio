@@ -109,25 +109,28 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Display = function Display(props) {
     var current = props.current;
 
+    var last = current.length - 1;
     console.log(current);
     return _react2.default.createElement(
-        'div',
+        "div",
         null,
         current.map(function (x, i) {
             return _react2.default.createElement(
-                'div',
-                { key: i },
+                "div",
+                { className: "currentContainer", key: i },
                 _react2.default.createElement(
-                    'h3',
+                    "h3",
                     null,
-                    'Name: ',
+                    "Name: ",
                     x.name
                 ),
                 _react2.default.createElement(
-                    'p',
+                    "p",
                     null,
+                    _react2.default.createElement("img", { src: x.img, alt: "an image of {x.name}" }),
                     x.content
-                )
+                ),
+                i === last ? "" : _react2.default.createElement("hr", null)
             );
         })
     );
@@ -367,25 +370,25 @@ var Main = function (_React$Component) {
                                 findName = _context4.sent;
                                 final = findName.data;
 
-                                console.log(final);
                                 this.setState({
-                                    current: [final]
+                                    current: [final],
+                                    value: ''
                                 });
-                                _context4.next = 13;
+                                _context4.next = 12;
                                 break;
 
-                            case 10:
-                                _context4.prev = 10;
+                            case 9:
+                                _context4.prev = 9;
                                 _context4.t0 = _context4['catch'](1);
 
                                 console.error(_context4.t0);
 
-                            case 13:
+                            case 12:
                             case 'end':
                                 return _context4.stop();
                         }
                     }
-                }, _callee4, this, [[1, 10]]);
+                }, _callee4, this, [[1, 9]]);
             }));
 
             function submitSearch(_x) {
